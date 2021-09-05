@@ -1,0 +1,99 @@
+:root{
+    --primary-color: #140C38;
+    --white-color: #fff;
+    --light-gray-color: #eee;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+h1, h2 ,h3, h4, h5, h6, .logo{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 5.5rem;
+}
+h3{
+    font-size: 5rem;
+}
+h4{
+    font-size: 4.5rem;
+}
+h5{
+    font-size: 4rem;
+}
+h6{
+    font-size: 3.5rem;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+.div-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1220px;
+    height: 5rem;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 2.5rem;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    border-bottom: 2px solid var(--light-gray-color);
+}
+.menu ul li a{
+    text-decoration: none;
+    padding-right: 2rem;
+    font-size: 1.8rem;
+    display: block;
+    transition: color 0.3s ease-in;
+}
+.menu ul li a:hover{
+    color: #3a1ac7;
+}
+.sec-bg{
+    background-image: url(img/main-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+.sec-w{
+    color: var(--primary-color);
+}
+.section{
+    min-height: 100vh;
+}
+.menu-spacing{
+    height: 5.2rem;
+}
+.flex-header{
+    display: flex;
+    align-items: center;
+}
+.img-intro img{
+    max-width: 100%;
+    height: auto;
+}
+.h1-div{
+    width: 50%;
+}
