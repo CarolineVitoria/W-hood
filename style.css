@@ -10,20 +10,24 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 h1, h2 ,h3, h4, h5, h6, .logo{
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 h1{
     font-size: 6rem;
-    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 5rem;
 }
 h2{
-    font-size: 5.5rem;
+    font-size: 6rem;
+    padding: 10rem 0 5rem 0;
 }
 h3{
     font-size: 5rem;
@@ -41,13 +45,15 @@ nav ul li{
     display: inline-block;
     list-style: none;
 }
+.spacing{
+    max-width: 120rem;
+    margin: 0 auto;
+}
 .div-flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1220px;
-    height: 5rem;
-    margin: 0 auto;
+    height: 6rem;
 }
 .logo{
     font-size: 2.5rem;
@@ -64,7 +70,6 @@ nav ul li{
 .menu ul li a{
     text-decoration: none;
     padding-right: 2rem;
-    font-size: 1.8rem;
     display: block;
     transition: color 0.3s ease-in;
 }
@@ -84,16 +89,35 @@ nav ul li{
     min-height: 100vh;
 }
 .menu-spacing{
-    height: 5.2rem;
+    height: 6.2rem;
 }
-.flex-header{
-    display: flex;
-    align-items: center;
+.grid-header{
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    height: 100vh;
 }
 .img-intro img{
     max-width: 100%;
     height: auto;
 }
-.h1-div{
+.header-t-div, .img-intro{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.header-t-div{
+    width: 90%;
+}
+p{
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+.t-div{
+    text-align: center;
     width: 50%;
+    margin:0 auto;
+}
+.grid-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
