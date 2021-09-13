@@ -7,15 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/181e07d76d.js" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
     <title>One-page</title>
 </head>
 <body>
+    <input type="checkbox" aria-label="close-menu" role="button" class="close-menu" id="close-menu-id">
+    <label  for="close-menu-id" title="close menu" class="close-menu-label"></label>
     <aside class="menu">
         <div class="div-flex spacing">
-           <a href="#header" class="logo">Logo</a>
+           <a href="#header" class="logo" onclick="getElementById('close-menu-id').checked = false;">Logo</a>
            <nav>
-               <ul>
+               <ul onclick="getElementById('close-menu-id').checked = false;">
                    <li><a href="#intro">intro</a></li>
                    <li><a href="#grid-one">grid-one</a></li>
                    <li><a href="#gallery">gallery</a></li>
@@ -37,12 +40,10 @@
                     In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.
                 </p> 
                 </div>
-                <div class="img-intro">
+                <div class="img-l">
                   <img src="img/HTML_CSS_JS.svg" alt="Desenho de pessoas segurando as logos do HTML, CSS e JS.">
                 </div>
-
             </div>
-
         </header>
         <section id="intro" class="sec-w section">
             <div class="spacing">
@@ -63,7 +64,7 @@
             </div> 
                 </div>
         </section>
-        <section id="grid-one" class="sec-bg section">
+        <section id="grid-one" class="sec-bg section grid-default">
             <div class="spacing">       
                     <h2>My grid</h2>
                     <p class="p1-grid">here are some recent work</p>
@@ -118,7 +119,7 @@
                 </div>
             </div>
         </section>
-        <section id="grid-two" class="sec-bg section">
+        <section id="grid-two" class="sec-bg section grid-default">
             <div class="spacing">       
                     <h2>My grid</h2>
                     <p class="p1-grid">here are some recent work</p>
@@ -234,7 +235,9 @@
         </section>
     </main>
     <footer class="sec-w spacing">
-        <p>feito com a força de pegasus <span class="heart">♥</span></p>
+        <p>feito com <span class="heart">❤</span> por C.Vitória</p>
     </footer>
+    
+    <a href="#" class="back-to-top" id="top"><i class="fas fa-space-shuttle"></i></a>
 </body>
 </html>

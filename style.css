@@ -41,8 +41,11 @@ h5{
 h6{
     font-size: 3.5rem;
 }
+nav ul{
+    display: flex;
+}
 nav ul li{
-    display: inline-block;
+    
     list-style: none;
 }
 .spacing{
@@ -51,6 +54,7 @@ nav ul li{
 }
 .div-flex{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 6rem;
@@ -76,7 +80,7 @@ a{
     color: var(--primary-color);
 }
 .menu ul li a:hover{
-    color: #2f12b1;
+    color: crimson;
 }
 .sec-bg{
     background-image: url(img/main-bg.svg);
@@ -99,11 +103,11 @@ a{
     grid-template-columns: 1fr 1.4fr;
     min-height: 100vh;
 }
-.img-intro img{
+.img-l img{
     max-width: 100%;
     height: auto;
 }
-.header-t-div, .img-intro{
+.header-t-div, .img-l{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -116,9 +120,12 @@ p{
     margin-bottom: 3rem;
 }
 .t-div{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     text-align: center;
-    width: 50%;
-    margin:0 auto;
+    max-width: 64rem;
+    margin: 0 auto;
 }
 .grid-div{
     display: grid;
@@ -136,7 +143,7 @@ p{
 .grid-div h3{
     font-size: 4rem;
 }
-#grid-one h2{
+.grid-default h2{
     padding: 25rem 0 0 0;
 }
 .p1-grid{
@@ -164,6 +171,7 @@ p{
 table{
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 2rem;
 }
 th, td{
     padding: 1rem;
@@ -213,7 +221,6 @@ legend{
     width: 100%;
     font-size: 3rem;
     outline: none;
-    transition: ;
 }
 .item-form input:focus, .item-form textarea:focus{
     box-shadow: 0 0 2rem  crimson;
@@ -245,6 +252,27 @@ footer p{
     font-size: 1.6rem;
     font-style: oblique;
 }
+.heart{
+    color: crimson;
+}
+.close-menu{
+    display: none;
+}
+.back-to-top{
+    padding: 0;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--white-color);
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: rotate(270deg);
+    border: 0.2rem solid var(--primary-color);
+}
 @media screen and (max-width: 800px) {
     .grid-header, .grid-div{
         grid-template-columns: 1fr;
@@ -260,4 +288,77 @@ footer p{
     .galeria-flex{
         display: block;
     }
+    .menu{
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+    .div-flex, .div-flex ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .div-flex{
+        height: 100vh;
+    }
+    ul li{
+        margin-top: 3.5rem;
+    }
+    .close-menu-label::after{
+        content: ' ☰';
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .close-menu:checked~.menu{
+        display: block;
+    }
+    .close-menu:checked~.close-menu-label::after{
+        content: '×';
+    }
+    .menu-spacing{
+        display: none;
+    }  
+    .grid-default h2{
+    padding: 10rem 0 5rem 0;
+    }
+    .div-img-contact{
+        display: none;
+    }
+    
+  h1 {
+    font-size: 4rem;
+    margin-top: 3rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 3.4rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+  }
+
+  h6 {
+    font-size: 2.8rem;
+  }
+
 }
