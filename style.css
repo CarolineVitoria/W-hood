@@ -336,6 +336,9 @@ footer p{
     .div-img-contact{
         display: none;
     }
+    .grid-contact{
+        grid-template-columns: 1fr;
+    }
     h1{
         font-size: 4rem;
         margin-top: 3rem;
